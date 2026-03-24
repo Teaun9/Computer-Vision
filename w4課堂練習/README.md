@@ -1,31 +1,34 @@
 # w4課堂練習
 ## key feature
-- `BATCH_SIZE = 32`
-- `LR = 0.001`
--`NUM_EPOCHS = 30`
+
+- BATCH_SIZE = `32`
+- LR = `0.001`
+- NUM_EPOCHS = `30`
+- Loss function: `CrossEntropyLoss`
+- Optimizer: `Adam`
+
+## Data Preprocessing
+
+- Resize images to `128 x 128`
+- Convert images to grayscale
+- Convert images to tensor
+- Normalize with:
+  - mean = 0.5
+  - std = 0.5
+
 ## architecture design
-1. 去雜訊：
-```
-cv2.fastNlMeansDenoisingColored(img, None, 15, 15, 7, 21)
-```
-  - `h = 15`
-  - `hColor = 15`
-  - `templateWindowSize = 7`
-  - `searchWindowSize = 21`
+The network consists of:
+- an initial convolution layer with 16 output channels
+- a residual block at 16 channels
+- max-pooling
+- a second convolution layer with 32 output channels
+- a residual block at 32 channels
+- max-pooling
+- a third convolution layer with 64 output channels
+- a residual block at 64 channels
+- max-pooling
+- a fully connected classifier with one hidden layer and dropout
 
-2. 對比增強：
-```
-cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-```
-  - `clipLimit = 2.0`
-  - `tileGridSize = (8, 8)`
-
-3. 銳化：
-```
-unsharp_mask(img, sigma=0.8, strength=0.5)
-```
-  - `sigma = 0.8`
-  - `strength = 0.5`
 ## Successful attempts
 1. Install `opencv-python` and `numpy`.
 2. Set the input and output folder paths in `CV.py`.
