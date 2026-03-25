@@ -69,7 +69,7 @@ def main():
     print(f"[From Scratch] Using device: {device}")
 
     # Hyperparameters
-    BATCH_SIZE = 32
+    BATCH_SIZE = 64
     LR = 0.001
     NUM_EPOCHS = 30
     
