@@ -81,7 +81,7 @@ print(f"🚀 Starting training on device: {device_to_use}")
 results = model.train(
     data=yaml_path,
     epochs=50,
-    imgsz=640,
+    imgsz=512,
     device=device_to_use,  # Dynamically set based on detected hardware
     batch=16,               # Adjust batch size to match available memory
     patience=20,

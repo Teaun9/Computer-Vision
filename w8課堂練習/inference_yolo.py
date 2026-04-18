@@ -8,7 +8,7 @@ import copy
 # 1. Configure model and dataset paths
 # ==========================================
 # Path to the best weights from your training run
-model_path = os.path.join("runs", "detect", "runs", "object_detection", "yolov8n_exp12", "weights", "best.pt")
+model_path = os.path.join("runs", "detect", "runs", "object_detection", "yolov8n_exp15", "weights", "best.pt")
 data_dir = "object-detection-dataset"  # Name of the split dataset directory
 target_split = 'test'
 
@@ -34,7 +34,7 @@ model = YOLO(model_path)
 # ==========================================
 # 4. Compute FLOPs and parameter count
 # ==========================================
-dummy_input = torch.randn(1, 3, 640, 640, dtype=torch.float32)
+dummy_input = torch.randn(1, 3, 512, 512, dtype=torch.float32)
 flop_model = copy.deepcopy(model.model).float().cpu()
 flops, params = profile(flop_model, inputs=(dummy_input,), verbose=False)
 del flop_model  # free memory
