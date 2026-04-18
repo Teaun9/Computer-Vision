@@ -1,5 +1,5 @@
 {
-  "name": "multiclassification",
+  "name": "Homework",
   "build": {
     "dockerfile": "../Dockerfile"
   },

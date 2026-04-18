@@ -1,0 +1,8 @@
+path: "/workspace/w8\u8AB2\u5802\u7DF4\u7FD2/object-detection-dataset"
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: helmet
+  1: vest
+  2: head
