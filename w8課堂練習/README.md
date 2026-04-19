@@ -7,6 +7,7 @@
 - patience =  `20`
 - workers =  `0`
 - seed =  `42`
+- model =  `yolo v8n`
 
 ## Model Complexity（Exp1）
 
@@ -20,57 +21,79 @@
 - mAP@50 = `0.8178`
 - mAP@50-95 = `0.4631`
 
+## training setting（Exp2）
+
+- BATCH_SIZE = `16`
+- Image size = `640`
+- NUM_EPOCHS = `10`
+- patience =  `20`
+- workers =  `0`
+- seed =  `42`
+- model =  `yolo v8n`
+
+## Model Complexity（Exp2）
+
+- FLops = `4.10 GFLOPs`
+- parameters = `3.01 M`
+
+## Test Set Results（Exp2）
+
+- Precision = `0.7992`
+- Recall = `0.7228`
+- mAP@50 = `0.7860`
+- mAP@50-95 = `0.4431`
+
+## training setting（Exp3）
+
+- BATCH_SIZE = `16`
+- Image size = `512`
+- NUM_EPOCHS = `10`
+- patience =  `20`
+- workers =  `0`
+- seed =  `42`
+- model =  `yolo v8n`
+
+## Model Complexity（Exp3）
+
+- FLops = `2.62 GFLOPs`
+- parameters = `3.01 M`
+
+## Test Set Results（Exp3）
+
+- Precision = `0.8154`
+- Recall = `0.6707`
+- mAP@50 = `0.7634`
+- mAP@50-95 = `0.4303`
+
+## training setting（Exp4）
+
+- BATCH_SIZE = `16`
+- Image size = `512`
+- NUM_EPOCHS = `50`
+- patience =  `20`
+- workers =  `0`
+- seed =  `42`
+- model =  `yolo v8n`
+
+## Model Complexity（Exp4）
+
+- FLops = `2.62 GFLOPs`
+- parameters = `3.01 M`
+
+## Test Set Results（Exp4）
+
+- Precision = `0.8233`
+- Recall = `0.7507`
+- mAP@50 = `0.7911`
+- mAP@50-95 = `0.4537`
+
 ## Successful attempts
-- BATCH_SIZE = `64`
-- LR = `0.001`
-- NUM_EPOCHS = `30`
-- Accuracy = `96.11%`
-- Macro Precision = `96.27%`
-- Macro Recall = `96.11%`
-- Macro F1-Score = `96.10%`
-
-## Failed attempts
-case1
-- BATCH_SIZE = `32`
-- LR = `0.001`
-- NUM_EPOCHS = `15`
-- Accuracy = `95.00%`
-- Macro Precision = `95.03%`
-- Macro Recall = `95.00%`
-- Macro F1-Score = `94.98%`
-
-case2
-- BATCH_SIZE = `32`
-- LR = `0.001`
-- NUM_EPOCHS = `50`
-- Accuracy = `95.56%`
-- Macro Precision = `95.67%`
-- Macro Recall = `95.56%`
-- Macro F1-Score = `95.56%`
-
-case3
-- BATCH_SIZE = `64`
-- LR = `0.001`
-- NUM_EPOCHS = `50`
-- Accuracy = `95.00%`
-- Macro Precision = `95.41%`
-- Macro Recall = `95.00%`
-- Macro F1-Score = `94.85%`
-
-case4
-- BATCH_SIZE = `32`
-- LR = `0.001`
-- NUM_EPOCHS = `30`
-- Accuracy = `93.89%`
-- Macro Precision = `94.25%`
-- Macro Recall = `93.89%`
-- Macro F1-Score = `93.85%`
-
-case5
-- BATCH_SIZE = `64`
-- LR = `0.001`
-- NUM_EPOCHS = `15`
-- Accuracy = `93.89%`
-- Macro Precision = `93.84%`
-- Macro Recall = `93.89%`
-- Macro F1-Score = `93.80%`
+- Model Complexity（Exp4）
+    - FLops = `2.62 GFLOPs`
+    - parameters = `3.01 M`
+    
+- Test Set Results（Exp4）
+    - Precision = `0.8233`
+    - Recall = `0.7507`
+    - mAP@50 = `0.7911`
+    - mAP@50-95 = `0.4537`
